@@ -1,0 +1,1 @@
+I noticed that after using git rebase, the commits from the feature branch were moved on top of the latest commit from main. The history looked cleaner and linear, as if the feature work was developed after the hotfix, instead of in parallel.
