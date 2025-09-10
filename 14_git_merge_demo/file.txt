@@ -1,0 +1,1 @@
+After git merge, Git keeps the complete history of both branches and creates a new merge commit, clearly showing where the branches joined together, preserving all parallel work before combining into one line.
