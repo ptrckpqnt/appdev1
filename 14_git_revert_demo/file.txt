@@ -1,2 +1,3 @@
 Line 1
 Line 2
+I noticed that after using git revert, the last commit was undone, but a new commit was added to the history showing that change. The file went back to its earlier content, but unlike git reset, the commit history stayed complete and nothing was deleted
