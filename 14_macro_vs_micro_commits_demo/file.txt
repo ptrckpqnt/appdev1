@@ -1,0 +1,1 @@
+I noticed that after switching to micro commits, the history became more detailed and organized—each commit was smaller, clearer in purpose, and easier to track compared to the bigger, less specific macro commits.
