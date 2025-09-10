@@ -1,2 +1,3 @@
 Line 1
 Line 2
+I noticed that after using git reset, the commits after that point were gone, and the file went back to how it looked in the earlier commit.
