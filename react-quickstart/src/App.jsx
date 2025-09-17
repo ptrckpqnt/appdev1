@@ -1,24 +1,23 @@
 import './App.css'
 
-
-const user = {
-  name: "Patrick Pioquinto",
-  age: 21,
-  country: "Philippines",
-  hobbies: ["Programming", "Designing", "Reading"],
-};
+const isStudent = true;
 
 function App() {
+  let statusMessage;
+
+  if (isStudent) {
+    statusMessage = <p>I am currently a student.</p>;
+  } else {
+    statusMessage = <p>I am working full-time.</p>;
+  }
+
   return (
     <div>
-      <h1>Displaying data</h1>
-      <h3>Hello, I’m {user.name}!</h3>
-      <p>Age: {user.age}</p>
-      <p>From: {user.country}</p>
-      <p>Hobbies: {user.hobbies.join(", ")}</p>
+      <h1>Conditional rendering</h1>
+      <h3>Hello, I’m Patrick!</h3>
+      {statusMessage}
     </div>
   );
 }
-
 
 export default App
