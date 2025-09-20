@@ -1,22 +1,27 @@
 import './App.css'
-
-const isStudent = true;
+const products = [
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
+];
 
 function App() {
-  let statusMessage;
-
-  if (isStudent) {
-    statusMessage = <p>I am currently a student.</p>;
-  } else {
-    statusMessage = <p>I am working full-time.</p>;
-  }
+  const listItems = products.map(product =>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+    >
+      {product.title}
+    </li>
+  );
 
   return (
-    <div>
-      <h1>Conditional rendering</h1>
-      <h3>Hello, I’m Patrick!</h3>
-      {statusMessage}
-    </div>
+    <>
+    <h1>Rendering list</h1>
+    <ul>{listItems}</ul>
+    </>
   );
 }
 
