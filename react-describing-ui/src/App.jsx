@@ -1,5 +1,7 @@
 import Gallery from './components/Gallery';
 import TodoList from './components/TodoList';
+import Profile2 from './components/Profile2';
+
 
 const person = {
   name: 'Gregorio Y. Zara',
@@ -8,7 +10,6 @@ const person = {
     color: 'pink'
   }
 };
-
 
 function Profile() {
   return (
@@ -46,6 +47,9 @@ export default function App() {
         <li>Work on the alcohol-fuelled engine</li>
       </ul>
     </div>
+
+    <Profile2 />
+    
 
     </>
 
