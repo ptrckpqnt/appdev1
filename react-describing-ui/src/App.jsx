@@ -1,18 +1,29 @@
 import Gallery from './components/Gallery';
+import TodoList from './components/TodoList';
 
-// function Profile() {
-//   return (
-//     <img
-//       src="https://i.imgur.com/MK3eW3As.jpg"
-//       alt="Katherine Johnson"
-//     />
-//   );
-// }
+function Profile() {
+  return (
+    <img
+      src="https://i.imgur.com/MK3eW3As.jpg"
+      alt="Katherine Johnson"
+    />
+  );
+}
 
 export default function App() {
   return (
+    <>
     <section>
-      <Gallery />
+      <h1>Amazing scientists</h1>
+      <Profile />
+      <Profile />
+      <Profile />
     </section>
+
+    <Gallery />
+    
+    <TodoList />
+    </>
+
   );
 }
