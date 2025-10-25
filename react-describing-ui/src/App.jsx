@@ -3,9 +3,10 @@ import TodoList from './components/TodoList';
 import Profile2 from './components/Profile2';
 import PackingList from './components/PackingList';
 import List from './components/List';
-import Impure from './components/NotPure';
 import Pure from './components/Pure';
 import NotPure from './components/NotPure';
+import RootComponent from './components/RootComponent';
+import { rootGreet } from './modules/RootModules';
 
 
 const person = {
@@ -15,6 +16,9 @@ const person = {
     color: 'pink'
   }
 };
+
+rootGreet();
+
 
 function Profile() {
   return (
@@ -65,7 +69,10 @@ export default function App() {
     <h1>Not pure components</h1>
     <NotPure />
 
+    <RootComponent />
+
     </>
 
   );
+  
 }
