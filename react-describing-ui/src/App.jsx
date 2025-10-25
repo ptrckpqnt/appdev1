@@ -1,6 +1,7 @@
 import Gallery from './components/Gallery';
 import TodoList from './components/TodoList';
 import Profile2 from './components/Profile2';
+import PackingList from './components/PackingList';
 
 
 const person = {
@@ -50,6 +51,7 @@ export default function App() {
 
     <Profile2 />
     
+    <PackingList />
 
     </>
 
