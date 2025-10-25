@@ -3,6 +3,9 @@ import TodoList from './components/TodoList';
 import Profile2 from './components/Profile2';
 import PackingList from './components/PackingList';
 import List from './components/List';
+import Impure from './components/NotPure';
+import Pure from './components/Pure';
+import NotPure from './components/NotPure';
 
 
 const person = {
@@ -55,6 +58,12 @@ export default function App() {
     <PackingList />
 
     <List />
+
+    <h1>Pure components</h1>
+    <Pure />
+
+    <h1>Not pure components</h1>
+    <NotPure />
 
     </>
 
