@@ -1,11 +1,12 @@
-import './App.css'
-import Gallery from './components/Gallery';
+import './App.css';
+import Gallery from './components/Gallery.jsx';
+import { Profile } from './components/Gallery.jsx';
 
 export default function App() {
   return (
-    <section>
-      <Gallery />
-    </section>
+    <>
+    <Profile />
+    <Gallery />
+    </>
   );
 }
-
