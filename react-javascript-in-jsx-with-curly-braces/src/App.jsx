@@ -1,27 +1,14 @@
-export default function Avatar() {
-  return (
-    <>
-    <h3>Static</h3>
-    <img
-      className="avatar"
-      src="https://i.imgur.com/7vQD0fPs.jpg"
-      alt="Gregorio Y. Zara"
-    />
-    <h3>Dynamic</h3>
-    <Avatar2/>
-    </>
-  );
+const today = new Date();
+
+function formatDate(date) {
+  return new Intl.DateTimeFormat(
+    'en-US',
+    { weekday: 'long' }
+  ).format(date);
 }
 
-function Avatar2() {
-  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
-  const description = 'Gregorio Y. Zara';
+export default function TodoList() {
   return (
-    <img
-      className="avatar"
-      src={avatar}
-      alt={description}
-    />
+    <h1>To Do List for {formatDate(today)}</h1>
   );
 }
-
