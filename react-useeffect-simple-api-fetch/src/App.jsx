@@ -1,9 +1,11 @@
-import UsersFetch from './UsersFetch'
+import PostsFetchAsync from './PostsFetchAsync'
+// import UsersFetch from './UsersFetch'
 
 function App() {
   return (
     <>
-      <UsersFetch/>
+      {/* <UsersFetch/> */}
+      <PostsFetchAsync/>
     </>
   )
 }
