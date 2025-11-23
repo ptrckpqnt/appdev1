@@ -1,11 +1,13 @@
 import PostsFetchAsync from "./PostsFetchAsync"
+import TodosFetchAxios from "./TodosFetchAxios"
 import UsersFetch from "./UsersFetch"
 
 function App() {
   return (
     <>
       {/* <UsersFetch/> */}
-      <PostsFetchAsync/>
+      {/* <PostsFetchAsync/> */}
+      <TodosFetchAxios/>
     </>
   )
 }
