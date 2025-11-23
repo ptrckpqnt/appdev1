@@ -1,48 +1,40 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function UsersFetch() {
+function UsersFetch() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(function () {
+  useEffect(() => {
+    
     fetch("https://jsonplaceholder.typicode.com/users?_limit=5")
-      .then(function (res) {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then(function (data) {
+      .then(response => response.json())
+      .then(data => {
         setUsers(data);
         setLoading(false);
       })
-      .catch(function (err) {
-        setError(err.message);
+      .catch(err => {
+        console.error("Error fetching users:", err);
+        setError("Failed to load users.");
         setLoading(false);
       });
-  }, []);
+  }, []); 
 
-  if (loading) {
-    return <p>Loading users…</p>;
-  }
-
-  if (error) {
-    return <p>Error fetching users: {error}</p>;
-  }
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p style={{ color: "red" }}>{error}</p>;
 
   return (
     <div>
-      <h2>Fetched Users</h2>
+      <h2>User List</h2>
       <ul>
-        {users.map(function (user) {
-          return (
-            <li key={user.id}>
-              <strong>{user.name}</strong> – {user.email}
-            </li>
-          );
-        })}
+        {users.map(user => (
+          <li key={user.id}>
+            <strong>{user.name}</strong> — {user.email}
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
+
+export default UsersFetch;
